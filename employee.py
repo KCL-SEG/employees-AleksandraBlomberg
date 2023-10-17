@@ -52,6 +52,11 @@ class Employee:
             return self.commissionNum*self.commissionPay
 
     def get_pay(self):
+        self.getPayMethod()
+        self.payMethod = f"{self.name}"
+        return self.pay;
+
+    def getPayMethod(self):
         if self.contract == False:
             self.pay = self.pay + self.salary
             self.payMethod = self.payMethod + f" works on a monthly salary of {self.salary}"
@@ -60,9 +65,9 @@ class Employee:
             self.pay = self.hours*self.hourlyRate
             self.payMethod = self.payMethod +f" works on a contract of {self.hours} hours at {self.hourlyRate}/hour"
         self.payMethod= self.payMethod + f". Their totoal pay is {self.pay}"
-
+        
     def __str__(self):
-        self.get_pay()
+        self.getPayMethod()
         return self.payMethod
 
 
@@ -112,3 +117,4 @@ ariel.set_hours(120)
 ariel.set_hourlyRate(30)
 ariel.set_bonusCommission(True)
 ariel.set_commissionPay(600)
+
