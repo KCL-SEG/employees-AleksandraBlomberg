@@ -45,7 +45,7 @@ class Employee:
 
             if self.commission > 0 and self.numOfContracts == 0:
                 payment_string += f' and receives a bonus commission of {self.commission}'
-            elif self.commission > 0 and self.noOfContracts > 0:
+            elif self.commission > 0 and self.numOfContracts > 0:
                 payment_string += f' and receives a commission for {self.numOfContracts} contract(s) at {self.commission}/contract'
 
             payment_string += f'. Their total pay is {self.pay}.'  
