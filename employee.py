@@ -26,7 +26,7 @@ class Employee:
 
         def get_pay(self):
             if (self.salary > 0):
-                self.pay = self.pay + self.monthly_salary
+                self.pay = self.pay + self.salary
             elif (self.hourly_rate > 0 and self.hours_worked > 0):
                 self.pay = self.pay + (self.hourly_rate * self.hours_worked)
 
@@ -43,9 +43,9 @@ class Employee:
             elif self.hourly_rate > 0 and self.hours_worked > 0:
                 payment_string += f' works on a contract of {self.hours_worked} hours at {self.hourly_rate}/hour'
 
-            if self.commission > 0 and self.no_contracts == 0:
+            if self.commission > 0 and self.numOfContracts == 0:
                 payment_string += f' and receives a bonus commission of {self.commission}'
-            elif self.commission > 0 and self.no_contracts > 0:
+            elif self.commission > 0 and self.noOfContracts > 0:
                 payment_string += f' and receives a commission for {self.numOfContracts} contract(s) at {self.commission}/contract'
 
             payment_string += f'. Their total pay is {self.pay}.'  
