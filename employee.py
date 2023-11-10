@@ -60,7 +60,7 @@ class Employee:
         else:
             self.pay = self.hours*self.hourlyRate
             self.payMethod = self.payMethod +f" works on a contract of {self.hours} hours at {self.hourlyRate}/hour"
-        self.payMethod= self.payMethod + f".\\s+ Their totoal pay is {self.pay}$"
+        self.payMethod= self.payMethod + f".\\s+Their totoal pay is {self.pay}.$"
         return self.pay;
         
     def __str__(self):
@@ -87,39 +87,3 @@ renee.set_salary(3000)
 renee.set_commission(True)
 renee.set_commissionNum(4)
 renee.set_commissionPay(200)
-
-# Jan works on a contract of 150 hours at 25/hour and receives a commission for 3 contract(s) at 220/contract.  Their total pay is 4410.
-jan = Employee()
-jan.set_name("Jan")
-jan.set_contract(True)
-jan.set_hours(150)
-jan.set_hourlyRate(25)
-jan.set_commission(True)
-jan.set_commissionNum(3)
-jan.set_commissionPay(220)
-
-# Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
-robbie = Employee()
-robbie.set_name("Robbie")
-robbie.set_salary(2000)
-robbie.set_bonusCommission(True)
-robbie.set_commissionPay(1500)
-
-
-# Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee()
-ariel.set_name("Ariel")
-ariel.set_contract(True)
-ariel.set_hours(120)
-ariel.set_hourlyRate(30)
-ariel.set_bonusCommission(True)
-ariel.set_commissionPay(600)
-
-# Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
-ariel = Employee()
-ariel.set_name("Ariel")
-ariel.set_contract(True)
-ariel.set_hours(120)
-ariel.set_hourlyRate(30)
-ariel.set_bonusCommission(True)
-ariel.set_commissionPay(600)
