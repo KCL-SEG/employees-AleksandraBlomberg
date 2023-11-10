@@ -12,10 +12,11 @@ class Employee:
         self.bonusCommission = False
         self.commissionNum = 0
         self.commissionPay = 0
-        self.payMethod = f"^{self.name}"
+        self.payMethod = f"^"
 
     def set_name(self,name):
         self.name = name
+        self.payMethod = self.payMethod + f"{self.name}"
 
     def set_contract(self, contract):
         self.contract = contract
@@ -71,6 +72,7 @@ class Employee:
 billie = Employee()
 billie.set_name("Billie")
 billie.set_salary(4000)
+print(str(billie))
 
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 charlie = Employee()
